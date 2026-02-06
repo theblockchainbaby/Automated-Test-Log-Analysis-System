@@ -76,8 +76,8 @@ def _add_corruption(row, rng):
     return row
 
 
-def generate(output_path, seed=42):
-    """Generate the full test log CSV."""
+def generate(output_path, seed=None):
+    """Generate the full test log CSV. Random seed each run by default."""
     rng = random.Random(seed)
     start_time = datetime(2025, 1, 1, 6, 0, 0)
     rows = []
