@@ -1,0 +1,159 @@
+======================================================================
+  AUTOMATED TEST LOG ANALYSIS REPORT
+  Generated: 2026-02-05 17:19:46
+======================================================================
+
+======================================================================
+  EXECUTIVE SUMMARY
+======================================================================
+
+  Total Test Records Analyzed : 54,681
+  Unique Devices Tested       : 10,000
+  Total Failures              : 1,616
+  Overall Failure Rate         : 2.96%
+  Date Range                   : 2025-01-01 to 2025-04-01
+  Unique Test Types            : 8
+  Unique Batches               : 25
+
+======================================================================
+  DATA QUALITY
+======================================================================
+
+  Rows with missing values     : 236
+  Rows out of valid range      : 210
+  Rows with bad timestamps     : 0
+  Rows with invalid results    : 0
+  Total rows removed           : 446
+  Clean rows remaining         : 54,681
+
+======================================================================
+  TOP FAILURE ERROR CODES
+======================================================================
+
+  Error Code   Test               Category              Count  Avg Temp  Avg Volt
+  --------------------------------------------------------------------------------
+  ERR_T01      Timing_Check       Timing Failure          118     72.0°C    1.060V
+  ERR_T02      Timing_Check       Timing Failure          104     70.1°C    1.054V
+  ERR_P01      Power_Cycle        Data Corruption         103     69.6°C    1.060V
+  ERR_T03      Timing_Check       Timing Failure           99     68.2°C    1.045V
+  ERR_S02      Stress_Test        Data Corruption          97     69.7°C    1.055V
+  ERR_D02      Data_Integrity     Data Corruption          97     68.6°C    1.040V
+  ERR_F02      Frequency_Scan     Overcurrent              94     69.7°C    1.049V
+  ERR_P02      Power_Cycle        Overcurrent              93     71.7°C    1.071V
+  ERR_D01      Data_Integrity     Data Corruption          92     69.0°C    1.056V
+  ERR_S01      Stress_Test        Thermal Issue            89     68.5°C    1.033V
+
+======================================================================
+  FAILURE CATEGORY BREAKDOWN
+======================================================================
+
+  Data Corruption        :   468 failures (29.0%)  |  Avg Temp: 69.8°C  Avg Voltage: 1.052V
+  Overcurrent            :   421 failures (26.1%)  |  Avg Temp: 70.6°C  Avg Voltage: 1.057V
+  Timing Failure         :   400 failures (24.8%)  |  Avg Temp: 69.6°C  Avg Voltage: 1.054V
+  Thermal Issue          :   327 failures (20.2%)  |  Avg Temp: 70.3°C  Avg Voltage: 1.043V
+
+======================================================================
+  HIGHEST FAILURE TEST
+======================================================================
+
+  Test Name    : Timing_Check
+  Failure Rate : 4.72%
+  Total Tests  : 6,805
+  Total Fails  : 321
+
+======================================================================
+  TEMPERATURE CORRELATION
+======================================================================
+
+  Correlation Coefficient : 0.0493
+  Strength                : Weak
+  Statistically Significant: Yes
+
+  Temperature ranges with elevated failure rates:
+    (90, 100] : 5.87%
+    (100, 110] : 8.26%
+    (110, 120] : 8.36%
+
+======================================================================
+  ANOMALOUS BATCHES
+======================================================================
+
+  Batch_17 — Failure Rate: 8.70%  (Z-Score: 4.55)
+
+======================================================================
+  ERROR SPIKES
+======================================================================
+
+  Spike days detected: 0
+
+======================================================================
+  OUTLIER DEVICES
+======================================================================
+
+  Outlier devices detected: 216
+    DEV_022_0082 — Failures: 2/3 (66.7%)  Z-Score: 8.24
+    DEV_006_0147 — Failures: 2/3 (66.7%)  Z-Score: 8.24
+    DEV_017_0385 — Failures: 2/3 (66.7%)  Z-Score: 8.24
+    DEV_017_0152 — Failures: 2/3 (66.7%)  Z-Score: 8.24
+    DEV_017_0298 — Failures: 2/3 (66.7%)  Z-Score: 8.24
+    DEV_021_0190 — Failures: 2/3 (66.7%)  Z-Score: 8.24
+    DEV_017_0162 — Failures: 3/5 (60.0%)  Z-Score: 7.38
+    DEV_019_0387 — Failures: 3/5 (60.0%)  Z-Score: 7.38
+    DEV_023_0097 — Failures: 4/8 (50.0%)  Z-Score: 6.09
+    DEV_006_0009 — Failures: 2/4 (50.0%)  Z-Score: 6.09
+
+======================================================================
+  FEATURE CORRELATIONS WITH FAILURE
+======================================================================
+
+  Feature             Correlation Strength     Significant
+  -------------------------------------------------------
+  Temperature              0.0493 Weak         Yes
+  Voltage                  0.0020 Weak         No
+  Frequency                0.0034 Weak         No
+  Execution_Time          -0.0012 Weak         No
+
+======================================================================
+  BATCH COMPARISON
+======================================================================
+
+  Batch          Total  Failures     Rate
+  ----------------------------------------
+  Batch_01     2,168.0      50.0    2.31%
+  Batch_02     2,148.0      60.0    2.79%
+  Batch_03     2,207.0      56.0    2.54%
+  Batch_04     2,202.0      60.0    2.72%
+  Batch_05     2,315.0      53.0    2.29%
+  Batch_06     2,143.0      69.0    3.22%
+  Batch_07     2,183.0      48.0    2.20%
+  Batch_08     2,187.0      67.0    3.06%
+  Batch_09     2,133.0      60.0    2.81%
+  Batch_10     2,183.0      63.0    2.89%
+  Batch_11     2,200.0      71.0    3.23%
+  Batch_12     2,183.0      57.0    2.61%
+  Batch_13     2,217.0      47.0    2.12%
+  Batch_14     2,177.0      65.0    2.99%
+  Batch_15     2,178.0      55.0    2.53%
+  Batch_16     2,160.0      55.0    2.55%
+  Batch_17     2,195.0     191.0    8.70% <<<
+  Batch_18     2,219.0      55.0    2.48%
+  Batch_19     2,203.0      64.0    2.91%
+  Batch_20     2,176.0      50.0    2.30%
+  Batch_21     2,140.0      67.0    3.13%
+  Batch_22     2,189.0      51.0    2.33%
+  Batch_23     2,187.0      65.0    2.97%
+  Batch_24     2,192.0      84.0    3.83%
+  Batch_25     2,196.0      53.0    2.41%
+
+======================================================================
+  KEY FINDINGS & RECOMMENDATIONS
+======================================================================
+
+  1. Highest failure test is 'Timing_Check' at 4.72% — recommend targeted root cause analysis.
+  2. Failure rate increases significantly above 80°C — recommend thermal mitigation review for high-temperature test conditions.
+  3. Anomalous batch(es) detected: Batch_17 — recommend process investigation for these production lots.
+  4. No strong feature correlations found with failure outcome.
+
+======================================================================
+  END OF REPORT
+======================================================================
