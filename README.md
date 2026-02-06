@@ -68,14 +68,25 @@ The system generates 10 plots:
 # Install dependencies
 pip install -r requirements.txt
 
-# Run full pipeline (generate data + analyze)
+# Run full pipeline with live progress bar (generate data + analyze)
 python main.py
 
 # Re-analyze existing data
 python main.py --skip-gen
 ```
 
-Output is saved to:
+### Interactive Notebook
+
+For a step-by-step walkthrough with inline visualizations:
+
+```bash
+jupyter notebook notebook.ipynb
+```
+
+The notebook lets you run each pipeline stage individually, inspect intermediate DataFrames, and see all plots rendered inline.
+
+### Output
+
 - `output/plots/` — 10 PNG visualizations
 - `output/reports/analysis_report.txt` — Full engineering report
 
